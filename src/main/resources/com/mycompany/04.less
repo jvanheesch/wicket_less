@@ -1,0 +1,10 @@
+// variables defined inside function:
+@import "03";
+
+h3 {
+  color: @localVar;
+}
+
+// the function has to be executed, be it in this file or in 03.less;
+// the fact that this statement may come after the h3 statement is similar to 02.less.
+.someFunc();

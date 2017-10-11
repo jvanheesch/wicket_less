@@ -31,5 +31,7 @@ public class HomePage extends WebPage {
 
         response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "02.less")));
         response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "01.less")));
+        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "03.less")));
+        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "04.less")));
     }
 }
