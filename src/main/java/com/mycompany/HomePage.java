@@ -1,5 +1,7 @@
 package com.mycompany;
 
+import de.agilecoders.wicket.less.LessResourceReference;
+import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.html.WebPage;
 
@@ -33,6 +35,8 @@ public class HomePage extends WebPage {
 //        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "04.less")));
 //        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "05.less")));
 //        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "arithmetic.less")));
+
+        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "usingThemeVar.less")));
     }
 
     @Override
@@ -44,3 +48,4 @@ public class HomePage extends WebPage {
         this.setOutputMarkupId(true);
     }
 }
+
