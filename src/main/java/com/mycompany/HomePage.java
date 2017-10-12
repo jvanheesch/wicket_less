@@ -1,7 +1,5 @@
 package com.mycompany;
 
-import de.agilecoders.wicket.less.LessResourceReference;
-import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.html.WebPage;
 
@@ -29,11 +27,20 @@ public class HomePage extends WebPage {
     public void renderHead(IHeaderResponse response) {
         super.renderHead(response);
 
-        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "02.less")));
-        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "01.less")));
-        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "03.less")));
-        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "04.less")));
-        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "05.less")));
-        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "arithmetic.less")));
+//        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "02.less")));
+//        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "01.less")));
+//        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "03.less")));
+//        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "04.less")));
+//        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "05.less")));
+//        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "arithmetic.less")));
+    }
+
+    @Override
+    protected void onInitialize() {
+        super.onInitialize();
+
+        this.add(new ThemeTogglePanel("themeTogglePanel"));
+
+        this.setOutputMarkupId(true);
     }
 }
