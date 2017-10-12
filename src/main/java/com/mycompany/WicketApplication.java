@@ -27,7 +27,13 @@ public class WicketApplication extends WebApplication {
 
         IBootstrapSettings bootstrapSettings = this.getBootstrapSettings();
         Bootstrap.install(this, bootstrapSettings);
-        BootstrapLess.install(this, Configuration::new);
+        BootstrapLess.install(this, () -> getConfiguration());
+    }
+
+    private static Configuration getConfiguration() {
+        Configuration configuration = new Configuration();
+        configuration.addExternalVariable("@joris", "yellow");
+        return configuration;
     }
 
     private IBootstrapSettings getBootstrapSettings() {

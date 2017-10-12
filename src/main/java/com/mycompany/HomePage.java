@@ -37,6 +37,7 @@ public class HomePage extends WebPage {
 //        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "arithmetic.less")));
 
         response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "usingThemeVar.less")));
+        response.render(CssHeaderItem.forReference(new LessResourceReference(HomePage.class, "externalVariables.less")));
     }
 
     @Override
